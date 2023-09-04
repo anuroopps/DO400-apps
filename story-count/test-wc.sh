@@ -1,6 +1,6 @@
 #!/bin/bash
 EXPECTED=$2
-ACTUAL=$(wc -w $1)
+ACTUAL=$(wc -w $1 | xargs )
 
 if [[ $EXPECTED == $ACTUAL ]]
 then
