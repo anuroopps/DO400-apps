@@ -1,0 +1,17 @@
+pipeline {
+       agent any
+       
+          stages {
+                    stage('checkout') {
+                                  steps {
+                                                  git branch: 'main', url: 'https://github.com/redhattraining/DO400-apps'
+                                  }
+                    }
+                          stage('test') {
+                                        steps {
+                                                        sh './story-count/test-wc.sh ./story-count/frankenstein.txt 433'
+                                        }
+                          }
+          }
+}
+    
