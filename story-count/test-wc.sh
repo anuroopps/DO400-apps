@@ -1,6 +1,6 @@
 #!/bin/bash
 EXPECTED=9
-ACTUAL=$(wc -w $1)
+ACTUAL=$(wc -w random.txt)
 
 if [[ $EXPECTED == $ACTUAL ]]
 then
