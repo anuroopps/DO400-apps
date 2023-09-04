@@ -1,6 +1,6 @@
 #!/bin/bash
 EXPECTED=9
-ACTUAL=$(wc -w $1 | xargs | cut -f1 -d' ')
+ACTUAL=$(wc -w $1)
 
 if [[ $EXPECTED == $ACTUAL ]]
 then
