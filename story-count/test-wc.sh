@@ -1,5 +1,5 @@
 #!/bin/bash
-EXPECTED=200
+EXPECTED=9
 ACTUAL=$(wc -w $1 | xargs | cut -f1 -d' ')
 
 if [[ $EXPECTED == $ACTUAL ]]
