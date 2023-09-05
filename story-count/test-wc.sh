@@ -1,7 +1,7 @@
 #!/bin/bash
 
 EXPECTED=2
-ACTUAL=$(wc -w "story-count/random.txt" | awk 'print($1)')
+ACTUAL=$(wc -w "story-count/random.txt" | awk 'print{$1}')
 
 if [[ $EXPECTED -eq $ACTUAL ]]; then
   echo "Both are matching"
