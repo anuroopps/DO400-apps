@@ -4,7 +4,7 @@ pipeline {
           stages {
                     stage('checkout') {
                                   steps {
-                                                  git branch: 'main', url: 'https://github.com/redhattraining/DO400-apps'
+                                                  git branch: 'main', url: 'https://github.com/anuroopps/DO400-apps'
                                   }
                     }
                           stage('test') {
