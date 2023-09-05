@@ -1,11 +1,14 @@
 #!/bin/bash
-EXPECTED=23
-ACTUAL=$(wc -w "story-count/random.txt" | xargs | cut -f1 -d' ')
 
-if [[ $EXPECTED == $ACTUAL ]]
-then
+EXPECTED=23
+ACTUAL=$(wc -w "story-count/random.txt")
+
+if [[ $EXPECTED -eq $ACTUAL ]]; then
   echo "Both are matching"
+elif [[ $EXPECTED -gt $ACTUAL ]]; then
+  echo "Expected is more than actual"
+  exit 1
 else
-  echo "FAIL: got $ACTUAL but expected $EXPECTED"
+  echo "Expected is less than actual"
   exit 1
 fi
