@@ -2,8 +2,8 @@
 
 EXPECTED=2
 ACTUAL=$(wc -w "story-count/random.txt" | awk '{print $1}')
-echo $EXPECTED
-echo $ACTUAL
+echo "Expected=$EXPECTED"
+echo "Actual=$ACTUAL"
 
 if [[ $EXPECTED -eq $ACTUAL ]]; then
   echo "Both are matching"
