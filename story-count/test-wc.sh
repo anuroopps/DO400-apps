@@ -1,6 +1,6 @@
 #!/bin/bash
 
-EXPECTED=2
+EXPECTED=13
 ACTUAL=$(wc -w "story-count/random.txt" | awk '{print $1}')
 echo "Expected=$EXPECTED"
 echo "Actual=$ACTUAL"
