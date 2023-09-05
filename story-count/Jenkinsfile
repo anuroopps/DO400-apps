@@ -9,7 +9,7 @@ pipeline {
                     }
                           stage('test') {
                                         steps {
-                                                        sh './story-count/test-wc.sh ./story-count/random.txt'
+                                                        sh './story-count/test-wc.sh'
                                         }
                           }
           }
