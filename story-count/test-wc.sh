@@ -1,10 +1,10 @@
 #!/bin/bash
-EXPECTED=13
+EXPECTED=23
 ACTUAL=$(wc -w "story-count/random.txt" | xargs | cut -f1 -d' ')
 
 if [[ $EXPECTED == $ACTUAL ]]
 then
-  echo "SUCCESS: correct word count"
+  echo "Both are matching"
 else
   echo "FAIL: got $ACTUAL but expected $EXPECTED"
   exit 1
