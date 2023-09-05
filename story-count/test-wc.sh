@@ -1,6 +1,6 @@
 #!/bin/bash
 EXPECTED=13
-ACTUAL=$(wc -w random.txt | xargs | cut -f1 -d' ')
+ACTUAL=$(wc -w < "random.txt" | awk '{print $1}')
 
 if [[ $EXPECTED == $ACTUAL ]]
 then
