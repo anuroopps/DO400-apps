@@ -1,6 +1,6 @@
 #!/bin/bash
 EXPECTED=23
-ACTUAL=$(wc -w "story-count/random.txt" | xargs | cut -f1 -d' ')
+ACTUAL=$(wc -w "story-count/random.txt")
 
 if [[ $EXPECTED == $ACTUAL ]]
 then
